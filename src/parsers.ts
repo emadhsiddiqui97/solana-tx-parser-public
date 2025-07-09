@@ -234,10 +234,10 @@ export class SolanaParser {
 				return parser(instruction, decoder);
 			} catch (error) {
 				// eslint-disable-next-line no-console
-				console.error("Parser does not matching the instruction args", {
-					programId: instruction.programId.toBase58(),
-					instructionData: instruction.data.toString("hex"),
-				});
+				// console.error("Parser does not matching the instruction args", {
+				// 	programId: instruction.programId.toBase58(),
+				// 	instructionData: instruction.data.toString("hex"),
+				// });
 
 				return this.buildUnknownParsedInstruction(instruction.programId, instruction.keys, instruction.data);
 			}
